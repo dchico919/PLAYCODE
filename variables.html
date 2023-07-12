@@ -9,18 +9,27 @@
 <body>
     <div id="output"></div>
     <script>
-        let name = "Daniel";    //string
+        let fname = "Daniel";    //string
         let age = 27;           //integer
         let gpa = 3.12;         //float
         const hometown = "The Bronx";
+        let lname = "Chico";
+        let email = "daniel.j.chico@outlook.com";
+        let department = "World domination";
+        let salary = "$72,000";
 
         let isDanielCool = true;    //boolean
         let family = ["melody", "greyson"]; //object
 
-        //document.getElementById("output").innerHTML = name + " is " + age + " years old and is from " + hometown;
+        //document.getElementById("output").innerHTML = fname + " is " + age + " years old and is from " + hometown;
         gpa=3.4;
         console.log(gpa);
-        document.getElementById("output").innerHTML = family;
+        document.getElementById("output").innerHTML = "<p>First Name: </p>" + fname;
+        document.getElementById("output").innerHTML += "<p>Last Name: </p>" + lname;
+        document.getElementById("output").innerHTML += "<p>Email: </p>" + email;
+        document.getElementById("output").innerHTML += "<p>Department: </p>" + department;
+        document.getElementById("output").innerHTML += "<p>Salary: </p>" + salary;
+
     </script>
 </body>
 </html>
