@@ -9,11 +9,21 @@
 <body>
     <div id="output"></div>
     <script>
-        let operand1 = 45;
-        let operand2 = 71;
+        let atBats = 300;
+        let hits = 65;
+        let singles = 50;
+        let doubles = 5;
+        let triples = 3;
+        let homeruns = 7;
+        let walks = 22;
 
-        let sum = operand1 + operand2;
-        //console.log(sum);
+        let bAverage = hits / (atBats - walks);
+        let obPercentage = (hits + walks) / atBats;
+        let tBases = singles + (doubles * 2) + (triples * 3) + (homeruns * 4)
+
+        document.getElementById("output").innerHTML = "<p>Batting Average: </p>" + bAverage;
+        document.getElementById("output").innerHTML += "<p>On Base Percentage: </p>" + obPercentage;
+        document.getElementById("output").innerHTML += "<p>Total Bases: </p>" + tBases;
     </script>
 </body>
 </html>
