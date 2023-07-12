@@ -20,10 +20,11 @@
         let bAverage = hits / (atBats - walks);
         let obPercentage = (hits + walks) / atBats;
         let tBases = singles + (doubles * 2) + (triples * 3) + (homeruns * 4)
+        
 
-        document.getElementById("output").innerHTML = "<p>Batting Average: </p>" + bAverage;
-        document.getElementById("output").innerHTML += "<p>On Base Percentage: </p>" + obPercentage;
-        document.getElementById("output").innerHTML += "<p>Total Bases: </p>" + tBases;
+        document.getElementById("output").innerHTML = "Batting Average: " + bAverage;
+        document.getElementById("output").innerHTML += "<p></p>" + "On Base Percentage: " + obPercentage;
+        document.getElementById("output").innerHTML += "<p></p>" + "Total Bases: " + tBases;
     </script>
 </body>
 </html>

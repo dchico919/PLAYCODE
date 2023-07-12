@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tennis Club</title>
+</head>
+<body>
+    <script>
+        let amount = prompt("How much did the member spend this month in additional charges?");
+        amount = parseFloat(amount); // Convert the input to a number
+    
+        const basicFee = 500;
+        const taxRate = 0.0625; // 6.25%
+    
+        let discount = 0;
+        let tax = 0;
+        let total = 0;
+    
+        if (amount >= 250 && amount <= 500) {
+          discount = (amount + basicFee) * 0.1;
+        } else if (amount > 500 && amount <= 1000) {
+          discount = (amount + basicFee) * 0.125;
+        } else if (amount > 1000 && amount <= 2000) {
+          discount = (amount + basicFee) * 0.15;
+        } else if (amount > 2000) {
+          discount = (amount + basicFee) * 0.2;
+        }
+    
+        tax = (basicFee + amount - discount) * taxRate;
+        total = basicFee + amount - discount + tax;
+    
+        // Display the results
+        console.log("Membership Fee $" + basicFee);
+        console.log("Aditional Fees $" + amount);
+        console.log("Bill: $" + (basicFee + amount));
+        console.log("Discount: -$" + discount);
+        console.log("Tax: $" + tax);
+        console.log("Total: $" + total);
+      </script>
+    
+</body>
+</html>
